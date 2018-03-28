@@ -10,12 +10,16 @@ public class Test {
 	private static final char[] hexCode = "0123456789ABCDEF".toCharArray();  
 	
 	public static void main(String[] args) throws Exception {
-		byte[] data1 = showData("C:\\Users\\ai\\Desktop\\test.class");
-		byte[] data2 = showData("C:\\Users\\ai\\Desktop\\test1.class");
+		byte[] data = showData("C:\\Users\\ai\\Desktop\\test.class");
+		byte[] data1 = showData("C:\\Users\\ai\\Desktop\\test1.class");
+		byte[] data2 = showData("C:\\Users\\ai\\Desktop\\test2.class");
 		byte[] data3 = showData("C:\\Users\\ai\\Desktop\\test3.class");
-		compareData(data1,data2);
-		compareData(data1,data3);
-		System.out.println("data1 length: "+data1.length+"  data2 length: "+data2.length+"  data3 length: "+data3.length);
+		byte[] data4 = showData("C:\\Users\\ai\\Desktop\\test4.class");
+		compareData(data,data1);
+		compareData(data,data2);
+		compareData(data,data3);
+		compareData(data,data4);
+		System.out.println("data length: "+data.length+"  data1 length: "+data1.length+"  data2 length: "+data3.length+"  data2 length: "+data3.length);
 	}
 
 	private static void compareData(byte[] data1,byte[] data2){
